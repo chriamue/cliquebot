@@ -1,0 +1,5 @@
+var config = require('./config')
+const Telegraf = require('telegraf')
+const bot = new Telegraf(config.bottoken)
+bot.start((ctx) => ctx.reply('Welcome!'))
+bot.startPolling()
